@@ -22,6 +22,9 @@
    - `docker-compose.yaml` - postgres, clickhouse, minio, nessie, sqlpad
    - `docker-compose-trino.yaml` - trino coordinator + 2 workers
    - `docker-compose-nc.yaml` - nessie-cli для подключения к nessie и работы с ветками
+
+   http://localhost:8080/ui/ - Trino UI
+
 2. Создайте **bucket** `iceberg` в MinIO:
    - Откройте MinIO Console: http://localhost:9001 (логин/пароль: `minioadmin`/`minioadmin`).
    - Создайте bucket с именем **`iceberg`** (публичным делать не требуется).
