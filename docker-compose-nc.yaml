@@ -1,0 +1,19 @@
+services:
+  nessie-cli:
+    image: python:3.11-slim
+    container_name: nessie-cli
+    environment:
+      NESSIE_URI: http://nessie:19120/api/v2
+    networks:
+      - lakehouse
+    command: >
+      bash -c "pip install --upgrade pip && \
+              pip install pynessie && \
+              pip uninstall -y marshmallow && \
+              pip install 'marshmallow<4' && \
+              tail -f /dev/null"
+
+networks:
+  lakehouse:
+    name: lakehouse
+    driver: bridge
