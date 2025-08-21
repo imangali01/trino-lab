@@ -1,4 +1,4 @@
-# Trino + Iceberg (Nessie)
+# Trino + Iceberg
 
 ## Что уже есть
 - **docker-compose** c (Trino 472, MinIO, Postgres, ClickHouse, Nessie, Iceberg, SQLPad).
