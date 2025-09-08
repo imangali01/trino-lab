@@ -80,20 +80,6 @@ services:
     networks:
       - lakehouse
 
-  sqlpad:
-    image: sqlpad/sqlpad:7
-    hostname: 'sqlpad'
-    ports:
-      - 3000:3000
-    environment:
-      SQLPAD_ADMIN: admin
-      SQLPAD_ADMIN_PASSWORD: admin
-      SQLPAD_APP_LOG_LEVEL: debug
-      SQLPAD_WEB_LOG_LEVEL: warn
-      SQLPAD_SEED_DATA_PATH: /etc/sqlpad/seed-data
-    networks:
-      - lakehouse
-
 
 networks:
   lakehouse:
