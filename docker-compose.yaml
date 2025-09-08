@@ -16,7 +16,7 @@ services:
     image: postgres:15
     container_name: postgres
     ports:
-      - "5432:5432"
+      - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -76,7 +76,7 @@ services:
       QUARKUS_DATASOURCE_POSTGRESQL_USERNAME: postgres
       QUARKUS_DATASOURCE_POSTGRESQL_PASSWORD: postgres
     ports:
-      - "19120:19120"
+      - 19120:19120
     networks:
       - lakehouse
 
